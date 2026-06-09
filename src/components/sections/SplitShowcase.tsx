@@ -18,16 +18,13 @@ export default function SplitShowcase() {
       background: '#000',
       marginTop: '72px',
       position: 'relative',
-      display: 'flex',
-      justifyContent: 'center',
-      padding: '48px',
+      lineHeight: 0,
     }}>
 
-      {/* Vídeo 16:9 centralizado com margens */}
+      {/* Vídeo 16:9 full-width */}
       <div style={{
         position: 'relative',
         width: '100%',
-        maxWidth: '1000px',
         aspectRatio: '16 / 9',
         lineHeight: 0,
         overflow: 'hidden',
