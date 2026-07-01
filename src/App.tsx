@@ -5,6 +5,7 @@ import Header from './components/Header'
 import SplitShowcase from './components/sections/SplitShowcase'
 import About from './components/sections/About'
 import Work from './components/sections/Work'
+import InfoVideo from './components/sections/InfoVideo'
 import PhotoGallery from './components/sections/PhotoGallery'
 import Footer from './components/sections/Footer'
 import LogoIntro from './components/LogoIntro'
@@ -39,6 +40,7 @@ export default function App() {
             <SplitShowcase />
             <About introDone={introDone} />
             <Work />
+            <InfoVideo />
             <PhotoGallery />
             <Footer />
           </motion.main>
