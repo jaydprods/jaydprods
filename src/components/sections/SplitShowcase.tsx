@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react'
+import { useIsMobile } from '../../hooks/useIsMobile'
 
 export default function SplitShowcase() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [muted, setMuted] = useState(true)
+  const isMobile = useIsMobile()
 
   const toggleMute = () => {
     if (!videoRef.current) return
@@ -18,20 +20,25 @@ export default function SplitShowcase() {
       background: '#000',
       marginTop: '72px',
       position: 'relative',
+      display: 'flex',
+      justifyContent: 'center',
       lineHeight: 0,
     }}>
 
-      {/* Vídeo 16:9 full-width */}
+      {/* Vídeo vertical 9:16 — sem cortes */}
       <div style={{
         position: 'relative',
-        width: '100%',
-        aspectRatio: '16 / 9',
         lineHeight: 0,
+        flexShrink: 0,
         overflow: 'hidden',
+        ...(isMobile
+          ? { width: '100%', aspectRatio: '9 / 16' }
+          : { height: 'min(82vh, 760px)', aspectRatio: '9 / 16' }
+        ),
       }}>
         <video
           ref={videoRef}
-          src="/split_video_web.mp4"
+          src="/hero_clinica.mp4"
           style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
           autoPlay muted loop playsInline
         />
@@ -40,7 +47,7 @@ export default function SplitShowcase() {
         <div style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%)',
+          background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 45%)',
           pointerEvents: 'none',
         }} />
 
@@ -48,7 +55,7 @@ export default function SplitShowcase() {
         <div style={{
           position: 'absolute',
           bottom: '28px',
-          left: '40px',
+          left: '28px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
@@ -74,17 +81,7 @@ export default function SplitShowcase() {
             textTransform: 'uppercase',
             color: 'rgba(255,255,255,0.9)',
           }}>
-            Iara &amp; João
-          </span>
-          <span style={{
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 300,
-            fontSize: '9px',
-            letterSpacing: '0.22em',
-            textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.45)',
-          }}>
-            Wedding Day
+            #BTS Publicidade
           </span>
         </div>
 
@@ -95,7 +92,7 @@ export default function SplitShowcase() {
           style={{
             position: 'absolute',
             bottom: '24px',
-            right: '28px',
+            right: '24px',
             background: 'rgba(0,0,0,0.45)',
             border: '1px solid rgba(255,255,255,0.25)',
             borderRadius: '999px',
