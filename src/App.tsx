@@ -12,6 +12,7 @@ import LogoIntro from './components/LogoIntro'
 import WorkPage from './pages/WorkPage'
 import CategoryPage from './pages/CategoryPage'
 import ContactPage from './pages/ContactPage'
+import GalleryPage from './pages/GalleryPage'
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false)
@@ -22,6 +23,7 @@ export default function App() {
       <Route path="/work" element={<WorkPage />} />
       <Route path="/work/:category" element={<CategoryPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/feira-medieval-braganca" element={<GalleryPage />} />
 
       {/* Homepage */}
       <Route path="/" element={
