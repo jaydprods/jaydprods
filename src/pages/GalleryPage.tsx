@@ -159,11 +159,6 @@ function InstagramGate({ onUnlock }: { onUnlock: () => void }) {
           </button>
         )}
 
-        {!followed && (
-          <button onClick={onUnlock} style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.25)', fontFamily: "'Inter', sans-serif", fontSize: '10px', letterSpacing: '0.1em', cursor: 'pointer', textTransform: 'uppercase' }}>
-            Continuar sem seguir
-          </button>
-        )}
       </div>
     </div>
   )
