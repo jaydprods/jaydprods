@@ -136,6 +136,9 @@ function InstagramGate({ onUnlock }: { onUnlock: () => void }) {
           <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '14px', lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', margin: 0 }}>
             Segue <strong style={{ color: '#fff', fontWeight: 500 }}>@jaydprods</strong> no Instagram para desbloquear o download das fotos da {TITLE} de {SUBTITLE.replace('Bragança ', 'Bragança, ')}.
           </p>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '12px', lineHeight: 1.6, color: 'rgba(255,255,255,0.4)', margin: 0 }}>
+            E não te esqueças de identificar <strong style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>@jaydprods</strong> quando publicares as fotos. 🖤
+          </p>
         </div>
 
         {/* Passo 1 — seguir */}
@@ -252,6 +255,9 @@ export default function GalleryPage() {
         </h1>
         <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '13px', color: 'rgba(255,255,255,0.35)', marginTop: '20px' }}>
           {photos.length} fotos · Clica numa foto para ver · Descarrega grátis
+        </p>
+        <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '12px', letterSpacing: '0.05em', color: 'rgba(255,255,255,0.3)', marginTop: '10px' }}>
+          Identifica <strong style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 500 }}>@jaydprods</strong> nas tuas publicações 🖤
         </p>
       </div>
 
