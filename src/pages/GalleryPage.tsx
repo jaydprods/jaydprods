@@ -11,7 +11,7 @@ const SLUG        = 'feira-medieval-braganca'
 const BASE        = `/galleries/${SLUG}`
 const INSTAGRAM   = 'https://www.instagram.com/jaydprods/'
 const UNLOCK_KEY  = `unlocked:${SLUG}`
-const TITLE       = 'Feira Medieval'
+const TITLE       = 'Festa da História'
 const SUBTITLE    = 'Bragança 2026'
 
 const photos = bragancaPhotos
