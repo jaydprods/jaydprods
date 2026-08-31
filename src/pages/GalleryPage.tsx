@@ -39,7 +39,6 @@ function Lightbox({ index, onClose, onDownload }: { index: number; onClose: () =
   const total = photos.length
   const isMobile = useIsMobile()
   const [hiRes, setHiRes] = useState(false)
-  useScrollLock()
 
   // Reset do estado de alta-resolução sempre que muda de foto
   useEffect(() => { setHiRes(false) }, [current])
@@ -122,7 +121,6 @@ function Lightbox({ index, onClose, onDownload }: { index: number; onClose: () =
 function InstagramGate({ onUnlock }: { onUnlock: () => void }) {
   const isMobile = useIsMobile()
   const [followed, setFollowed] = useState(false)
-  useScrollLock()
 
   // Overlay sempre visível (opacity 1) — não depende de RAF/framer para aparecer.
   // A entrada é feita por animação CSS, que corre mesmo com o separador em segundo plano.
@@ -194,6 +192,11 @@ export default function GalleryPage() {
   useEffect(() => {
     try { if (localStorage.getItem(UNLOCK_KEY) === '1') setUnlocked(true) } catch {}
   }, [])
+
+  // Bloqueia o scroll enquanto o gate ou uma foto estão abertos — controlado pelo
+  // estado (não pela montagem dos componentes), por isso liberta de imediato ao fechar,
+  // sem depender da animação de saída.
+  useScrollLock(!unlocked || lightbox !== null)
 
   const unlock = () => {
     setUnlocked(true)
