@@ -67,11 +67,9 @@ function Lightbox({ index, onClose, onDownload }: { index: number; onClose: () =
   const name = photos[current].name
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-      transition={{ duration: 0.25 }}
+    <div
       onClick={onClose}
-      style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(0,0,0,0.93)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '16px' : '64px', cursor: 'zoom-out' }}
+      style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(0,0,0,0.93)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '16px' : '64px', cursor: 'zoom-out', animation: 'gateFadeIn 0.2s ease both' }}
     >
       {/* Preview como placeholder instantâneo + original 4K por cima */}
       <div onClick={e => e.stopPropagation()} style={{ position: 'relative', maxWidth: '100%', maxHeight: maxH, lineHeight: 0 }}>
@@ -113,7 +111,7 @@ function Lightbox({ index, onClose, onDownload }: { index: number; onClose: () =
       </div>
 
       <button onClick={onClose} style={{ position: 'fixed', top: '20px', right: '24px', background: 'none', border: 'none', color: 'rgba(255,255,255,0.4)', fontSize: '24px', cursor: 'pointer', lineHeight: 1, zIndex: 1001 }}>✕</button>
-    </motion.div>
+    </div>
   )
 }
 
@@ -128,7 +126,6 @@ function InstagramGate({ onUnlock }: { onUnlock: () => void }) {
     <div
       style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(0,0,0,0.78)', backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', animation: 'gateFadeIn 0.3s ease both' } as React.CSSProperties}
     >
-      <style>{`@keyframes gateFadeIn { from { opacity: 0 } to { opacity: 1 } } @keyframes gateRise { from { opacity: 0; transform: translateY(18px) } to { opacity: 1; transform: translateY(0) } }`}</style>
       <div
         style={{ maxWidth: '420px', width: '100%', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(10,10,10,0.92)', borderRadius: '8px', padding: isMobile ? '40px 28px' : '52px 44px', animation: 'gateRise 0.4s ease 0.05s both' }}
       >
@@ -381,17 +378,14 @@ export default function GalleryPage() {
         )}
       </AnimatePresence>
 
-      {/* Lightbox */}
-      <AnimatePresence>
-        {lightbox !== null && (
-          <Lightbox index={lightbox} onClose={() => setLightbox(null)} onDownload={downloadOne} />
-        )}
-      </AnimatePresence>
+      {/* Lightbox — sem AnimatePresence: desmonta na hora ao fechar,
+          em sincronia com a libertação do scroll (sem glitch) */}
+      {lightbox !== null && (
+        <Lightbox index={lightbox} onClose={() => setLightbox(null)} onDownload={downloadOne} />
+      )}
 
       {/* Gate Instagram */}
-      <AnimatePresence>
-        {!unlocked && <InstagramGate onUnlock={unlock} />}
-      </AnimatePresence>
+      {!unlocked && <InstagramGate onUnlock={unlock} />}
 
     </div>
   )
