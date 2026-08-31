@@ -38,7 +38,11 @@ function Lightbox({ index, onClose, onDownload }: { index: number; onClose: () =
   const [current, setCurrent] = useState(index)
   const total = photos.length
   const isMobile = useIsMobile()
+  const [hiRes, setHiRes] = useState(false)
   useScrollLock()
+
+  // Reset do estado de alta-resolução sempre que muda de foto
+  useEffect(() => { setHiRes(false) }, [current])
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -49,6 +53,8 @@ function Lightbox({ index, onClose, onDownload }: { index: number; onClose: () =
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
   }, [total, onClose])
+
+  const maxH = isMobile ? 'calc(100vh - 32px)' : 'calc(100vh - 128px)'
 
   const arrowBtn: React.CSSProperties = {
     position: 'fixed', top: '50%', transform: 'translateY(-50%)',
@@ -68,18 +74,24 @@ function Lightbox({ index, onClose, onDownload }: { index: number; onClose: () =
       onClick={onClose}
       style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(0,0,0,0.93)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: isMobile ? '16px' : '64px', cursor: 'zoom-out' }}
     >
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={current}
+      {/* Preview como placeholder instantâneo + original 4K por cima */}
+      <div onClick={e => e.stopPropagation()} style={{ position: 'relative', maxWidth: '100%', maxHeight: maxH, lineHeight: 0 }}>
+        <img
+          key={`prev-${current}`}
           src={previewUrl(name)}
           alt=""
-          initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.97 }}
-          transition={{ duration: 0.2 }}
-          style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
           draggable={false}
-          onClick={e => e.stopPropagation()}
+          style={{ display: 'block', maxWidth: '100%', maxHeight: maxH, objectFit: 'contain' }}
         />
-      </AnimatePresence>
+        <img
+          key={`full-${current}`}
+          src={fullUrl(name)}
+          alt=""
+          draggable={false}
+          onLoad={() => setHiRes(true)}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', opacity: hiRes ? 1 : 0, transition: 'opacity 0.35s ease' }}
+        />
+      </div>
 
       <button onClick={e => { e.stopPropagation(); setCurrent(c => (c - 1 + total) % total) }} style={{ ...arrowBtn, left: isMobile ? '8px' : '24px' }}
         onMouseEnter={e => { e.currentTarget.style.borderColor = '#fff'; e.currentTarget.style.color = '#fff' }}
