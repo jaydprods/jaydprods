@@ -118,7 +118,14 @@ function Lightbox({ index, onClose, onDownload }: { index: number; onClose: () =
 // ─── GATE INSTAGRAM ───────────────────────────────────────────────────────────
 function InstagramGate({ onUnlock }: { onUnlock: () => void }) {
   const isMobile = useIsMobile()
-  const [followed, setFollowed] = useState(false)
+
+  // Único toque: guarda o desbloqueio ANTES de abrir o Instagram (o browser interno
+  // do Instagram não deixa voltar atrás para um 2º passo), e desbloqueia a página por
+  // baixo. Ao voltarem, a galeria já está aberta.
+  const followAndUnlock = () => {
+    try { localStorage.setItem(UNLOCK_KEY, '1') } catch {}
+    setTimeout(onUnlock, 60)  // deixa o link abrir o Instagram primeiro
+  }
 
   // Overlay sempre visível (opacity 1) — não depende de RAF/framer para aparecer.
   // A entrada é feita por animação CSS, que corre mesmo com o separador em segundo plano.
@@ -148,26 +155,16 @@ function InstagramGate({ onUnlock }: { onUnlock: () => void }) {
           </p>
         </div>
 
-        {/* Passo 1 — seguir */}
+        {/* Seguir — abre o Instagram e desbloqueia num único toque */}
         <a
           href={INSTAGRAM}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => setFollowed(true)}
+          onClick={followAndUnlock}
           style={{ width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '10px', border: 'none', borderRadius: '999px', padding: '16px', background: '#fff', color: '#000', textDecoration: 'none', fontFamily: "'Inter', sans-serif", fontSize: '12px', fontWeight: 500, letterSpacing: '0.15em', textTransform: 'uppercase' }}
         >
-          Seguir no Instagram
+          Seguir e ver as fotos
         </a>
-
-        {/* Passo 2 — confirmar (aparece após clicarem em seguir) */}
-        {followed && (
-          <button
-            onClick={onUnlock}
-            style={{ width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', border: '1px solid rgba(255,255,255,0.25)', borderRadius: '999px', padding: '16px', background: 'transparent', color: '#fff', cursor: 'pointer', fontFamily: "'Inter', sans-serif", fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', animation: 'gateFadeIn 0.3s ease both' }}
-          >
-            ✓ Já segui — desbloquear
-          </button>
-        )}
 
       </div>
     </div>
