@@ -114,8 +114,6 @@ export const bragancaPhotos: GalleryPhoto[] = [
   { name: 'braganca-111.jpg', portrait: true },
   { name: 'braganca-112.jpg', portrait: true },
   { name: 'braganca-113.jpg', portrait: true },
-  { name: 'braganca-114.jpg', portrait: true },
-  { name: 'braganca-115.jpg', portrait: true },
   { name: 'braganca-116.jpg', portrait: true },
   { name: 'braganca-117.jpg', portrait: true },
   { name: 'braganca-118.jpg', portrait: true },
