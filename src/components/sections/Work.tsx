@@ -48,17 +48,16 @@ function ServiceCard({ title, category, thumb, description }: typeof services[0]
             position: 'absolute', inset: 0,
             width: '100%', height: '100%',
             objectFit: 'cover', objectPosition: 'center',
-            transition: 'transform 0.6s ease',
           }}
-          className="group-hover:scale-[1.03]"
+          className="grayscale brightness-90 transition duration-700 ease-out group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-[1.03]"
         />
         <div
           style={{
             position: 'absolute', inset: 0,
-            background: 'rgba(0,0,0,0.25)',
+            background: 'rgba(0,0,0,0.32)',
             transition: 'background 0.3s',
           }}
-          className="group-hover:bg-black/45"
+          className="group-hover:bg-black/0"
         />
       </div>
 
