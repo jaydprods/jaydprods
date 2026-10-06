@@ -1,55 +1,75 @@
-const logos = [
-  { src: '/logos/nike.png',         alt: 'Nike'         },
-  { src: '/logos/sporting.png',     alt: 'Sporting CP'  },
-  { src: '/logos/nude-project.png', alt: 'Nude Project' },
-  { src: '/logos/umpercento.png',   alt: '1%'           },
-  { src: '/logos/afa.png',          alt: 'AFA'          },
-  { src: '/logos/fluxo.png',        alt: 'Fluxo'        },
-  { src: '/logos/logo-pb5.png',     alt: 'Cliente 7'    },
-  { src: '/logos/logo-preto2.png',  alt: 'Cliente 8'    },
-  { src: '/logos/brand-1.png',      alt: 'Cliente 9'    },
-  { src: '/logos/brand-2.png',      alt: 'Cliente 10'   },
-  { src: '/logos/brand-3.png',      alt: 'Cliente 11'   },
+import { useNavigate } from 'react-router-dom'
+import { useIsMobile } from '../../hooks/useIsMobile'
+
+const clients = [
+  'CrossFit Gleis 10',
+  'Umpercento',
+  'Acushla',
+  'All-In Studio',
+  'Hybrid Day',
+  'Tiago Santos',
+  'Festa da História',
+  'Sould Il',
 ]
 
 export default function Clients() {
-  return (
-    <section className="bg-black py-20 px-6 border-t border-zinc-900">
-      <div className="max-w-6xl mx-auto">
+  const navigate = useNavigate()
+  const isMobile = useIsMobile()
 
-        <p className="text-xs tracking-[0.3em] uppercase text-zinc-600 mb-12 text-center">
+  return (
+    <section className="bg-black border-t border-zinc-900" style={{ padding: isMobile ? '72px 20px' : '110px 48px' }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto', textAlign: 'center' }}>
+
+        {/* Eyebrow */}
+        <p style={{
+          fontFamily: "'Inter', sans-serif", fontWeight: 300,
+          fontSize: '10px', letterSpacing: '0.4em', textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.35)', marginBottom: isMobile ? '40px' : '56px',
+        }}>
           Trusted by
         </p>
 
-        {/* Grelha 6 colunas × 2 linhas */}
-        <div className="grid grid-cols-6 gap-px bg-zinc-900">
-          {logos.map(({ src, alt }) => (
-            <div
-              key={src}
-              className="bg-black flex items-center justify-center group"
-              style={{ height: '100px' }}
+        {/* Nomes dos clientes */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)',
+          gap: isMobile ? '28px 16px' : '48px 24px',
+          marginBottom: isMobile ? '48px' : '64px',
+        }}>
+          {clients.map(name => (
+            <span
+              key={name}
+              style={{
+                fontFamily: "'Delight', sans-serif", fontWeight: 700,
+                fontSize: isMobile ? '14px' : 'clamp(15px, 1.3vw, 19px)',
+                letterSpacing: '0.04em', textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.4)', transition: 'color 0.3s ease',
+                lineHeight: 1.3,
+              }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.95)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
             >
-              {/* Container fixo para cada logo — garante uniformidade */}
-              <div className="flex items-center justify-center" style={{ width: '90px', height: '44px' }}>
-                <img
-                  src={src}
-                  alt={alt}
-                  draggable={false}
-                  style={{
-                    width: '90px',
-                    height: '44px',
-                    objectFit: 'contain',
-                    filter: 'brightness(0) invert(1)',
-                    opacity: 0.35,
-                    transition: 'opacity 0.4s ease',
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.opacity = '0.75')}
-                  onMouseLeave={e => (e.currentTarget.style.opacity = '0.35')}
-                />
-              </div>
-            </div>
+              {name}
+            </span>
           ))}
         </div>
+
+        {/* CTA — portfólio */}
+        <button
+          onClick={() => navigate('/work')}
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: '10px',
+            border: '1px solid rgba(255,255,255,0.25)', borderRadius: '999px',
+            padding: '16px 40px', background: 'transparent', color: '#fff', cursor: 'pointer',
+            fontFamily: "'Inter', sans-serif", fontSize: '11px', fontWeight: 400,
+            letterSpacing: '0.18em', textTransform: 'uppercase',
+            transition: 'border-color 0.3s, background 0.3s, color 0.3s',
+          }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = '#fff'; e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#000' }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#fff' }}
+        >
+          View our work →
+        </button>
 
       </div>
     </section>

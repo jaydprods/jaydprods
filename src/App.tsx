@@ -6,6 +6,7 @@ import SplitShowcase from './components/sections/SplitShowcase'
 import About from './components/sections/About'
 import Work from './components/sections/Work'
 import InfoVideo from './components/sections/InfoVideo'
+import Clients from './components/sections/Clients'
 import Footer from './components/sections/Footer'
 import LogoIntro from './components/LogoIntro'
 import WorkPage from './pages/WorkPage'
@@ -40,6 +41,7 @@ export default function App() {
             <About introDone={introDone} />
             <Work />
             <InfoVideo />
+            <Clients />
             <Footer />
           </motion.main>
         </>

@@ -9,7 +9,7 @@ const services = [
     category: 'Audiovisual',
     thumb: '/service-video.jpg',
     description:
-      'Captamos vídeo na sua essência mais pura, transformando a tua história numa experiência cinematográfica que move e inspira. Da concepção ao ecrã, cada frame é construído com intenção.',
+      'From brand films to social-first content, we turn ideas into films that move people and build brands. Concept, production and edit — handled end to end.',
   },
   {
     id: 'photography',
@@ -17,7 +17,7 @@ const services = [
     category: 'Editorial',
     thumb: '/service-photography.jpg',
     description:
-      'Da fotografia de retrato editorial a campanhas de marca, o nosso trabalho combina luz, composição e emoção para criar imagens que comunicam mais do que mil palavras.',
+      'Editorial portraits, campaigns and event coverage. Light, composition and emotion crafted with intention — images made to carry your brand across every platform.',
   },
   {
     id: 'streaming',
@@ -25,7 +25,7 @@ const services = [
     category: 'Live Production',
     thumb: '/service-streaming.jpg',
     description:
-      'Levamos os teus eventos, lançamentos e performances a audiências em todo o mundo com produção profissional de transmissão em direto — sem perder qualidade nem impacto.',
+      'Multi-camera live production for events, launches and conferences. Broadcast-quality streams that reach audiences anywhere — without losing impact.',
   },
 ]
 
@@ -155,7 +155,7 @@ export default function Work() {
     <section id="work" className="bg-black border-t border-zinc-900" style={{ padding: isMobile ? '64px 20px' : '96px 48px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-        <div className="flex items-end justify-between mb-16">
+        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between mb-16">
           <div>
             <p style={{
               fontFamily: "'Inter', sans-serif",
@@ -179,6 +179,9 @@ export default function Work() {
               Services
             </h2>
           </div>
+          <p style={{ maxWidth: '340px', fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '13px', lineHeight: 1.75, color: 'rgba(255,255,255,0.45)' }}>
+            Full-service production, from first concept to final broadcast — video, photography and live, under one roof.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-5">

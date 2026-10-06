@@ -66,8 +66,9 @@ export default function About({ introDone }: { introDone: boolean }) {
             <span className="text-zinc-500">tells a story.</span>
           </h2>
           <p className="text-zinc-400 leading-relaxed mb-4">
-            JAYD Productions is a visual production studio specializing in cinematic storytelling,
-            brand films, and editorial photography. We believe great visuals move people.
+            JAYD is a full-service visual production studio — video, photography and live
+            streaming under one roof. We partner with brands and creators to turn ideas into
+            work that gets seen, from cinematic brand films to broadcast-grade live events.
           </p>
           <p className="text-zinc-500 leading-relaxed text-sm">
             Based in Aveiro, working worldwide.
