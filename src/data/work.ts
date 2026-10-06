@@ -38,6 +38,28 @@ export type Client = {
 export const clients: Record<string, Client[]> = {
   'sports': [
     {
+      id: 'crossfit-gleis10',
+      name: 'CrossFit Gleis 10 — Switzerland\'s largest CrossFit box',
+      projects: [
+        {
+          id: 'cfg10-main',
+          title: 'CrossFit Gleis 10',
+          description: 'An ongoing content partnership with CrossFit Gleis 10 — Switzerland\'s largest CrossFit box. A series of vertical films spotlighting athletes, coaches and events, produced to grow the brand across social.',
+          videos: [
+            { id: 1, title: 'Competition Reel', type: 'local', src: '/clients/crossfit-gleis10/reel.mp4', portrait: true, coverPortrait: true, thumb: '/clients/crossfit-gleis10/reel-thumb.jpg' },
+            { id: 2, title: 'Leandra — Meet the Coach', type: 'local', src: '/clients/crossfit-gleis10/leandra.mp4', portrait: true, thumb: '/clients/crossfit-gleis10/leandra-thumb.jpg' },
+            { id: 3, title: 'Was ist Hyrox', type: 'local', src: '/clients/crossfit-gleis10/hyrox.mp4', portrait: true, thumb: '/clients/crossfit-gleis10/hyrox-thumb.jpg' },
+            { id: 4, title: 'Nico — Sportphysio', type: 'local', src: '/clients/crossfit-gleis10/nico.mp4', portrait: true, thumb: '/clients/crossfit-gleis10/nico-thumb.jpg' },
+            { id: 5, title: 'Holiday', type: 'local', src: '/clients/crossfit-gleis10/holiday.mp4', portrait: true, thumb: '/clients/crossfit-gleis10/holiday-thumb.jpg' },
+            { id: 6, title: 'Lia — Nutritionist', type: 'local', src: '/clients/crossfit-gleis10/lia.mp4', portrait: true, thumb: '/clients/crossfit-gleis10/lia-thumb.jpg' },
+            { id: 7, title: 'Alessandro', type: 'local', src: '/clients/crossfit-gleis10/alessandro.mp4', portrait: true, thumb: '/clients/crossfit-gleis10/alessandro-thumb.jpg' },
+            { id: 8, title: 'Seraina — Meet the Coach', type: 'local', src: '/clients/crossfit-gleis10/seraina.mp4', portrait: true, thumb: '/clients/crossfit-gleis10/seraina-thumb.jpg' },
+            { id: 9, title: 'Marc', type: 'local', src: '/clients/crossfit-gleis10/marc.mp4', portrait: true, thumb: '/clients/crossfit-gleis10/marc-thumb.jpg' },
+          ],
+        },
+      ],
+    },
+    {
       id: 'tiago-santos',
       name: 'Tiago Santos — Kickboxing World Champion',
       projects: [
