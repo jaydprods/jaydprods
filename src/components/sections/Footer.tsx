@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         <div>
           <div className="text-xl font-black tracking-tight text-white mb-1">JAYD PRODS</div>
-          <p className="text-zinc-600 text-sm">Visual Production Studio · Aveiro</p>
+          <p className="text-zinc-600 text-sm">Estúdio de Produção Visual · Aveiro</p>
         </div>
 
         <div className="flex items-center gap-6">
@@ -32,7 +32,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-5xl mx-auto mt-12 pt-8 border-t border-zinc-900">
-        <p className="text-zinc-700 text-xs">© 2026 JAYD Productions. All rights reserved.</p>
+        <p className="text-zinc-700 text-xs">© 2026 JAYD Productions. Todos os direitos reservados.</p>
       </div>
     </footer>
   )

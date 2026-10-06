@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useIsMobile } from '../hooks/useIsMobile'
 
 const navItems = [
-  { label: 'Welcome',  href: '#welcome',  route: null       },
-  { label: 'Work',     href: null,        route: '/work'    },
-  { label: 'Services', href: '#work',     route: null       },
-  { label: 'Contact',  href: null,        route: '/contact' },
+  { label: 'Início',   href: '#welcome',  route: null       },
+  { label: 'Portfólio', href: null,       route: '/work'    },
+  { label: 'Serviços', href: '#work',     route: null       },
+  { label: 'Contacto', href: null,        route: '/contact' },
 ]
 
 export default function Header() {

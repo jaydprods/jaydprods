@@ -70,7 +70,7 @@ export default function SplitShowcase() {
             textTransform: 'uppercase',
             color: 'rgba(255,255,255,0.5)',
           }}>
-            Featured Work
+            Em Destaque
           </span>
           <div style={{ width: '28px', height: '1px', background: 'rgba(255,255,255,0.25)' }} />
           <span style={{

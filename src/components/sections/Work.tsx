@@ -5,27 +5,27 @@ import { useIsMobile } from '../../hooks/useIsMobile'
 const services = [
   {
     id: 'video',
-    title: 'Video',
+    title: 'Vídeo',
     category: 'Audiovisual',
     thumb: '/service-video.jpg',
     description:
-      'From brand films to social-first content, we turn ideas into films that move people and build brands. Concept, production and edit — handled end to end.',
+      'De brand films a conteúdo para redes sociais, transformamos ideias em filmes que movem pessoas e constroem marcas. Conceito, produção e edição — do início ao fim.',
   },
   {
     id: 'photography',
-    title: 'Photography',
+    title: 'Fotografia',
     category: 'Editorial',
     thumb: '/service-photography.jpg',
     description:
-      'Editorial portraits, campaigns and event coverage. Light, composition and emotion crafted with intention — images made to carry your brand across every platform.',
+      'Retratos editoriais, campanhas e cobertura de eventos. Luz, composição e emoção com intenção — imagens feitas para levar a tua marca a todas as plataformas.',
   },
   {
     id: 'streaming',
     title: 'Streaming',
-    category: 'Live Production',
+    category: 'Produção ao Vivo',
     thumb: '/service-streaming.jpg',
     description:
-      'Multi-camera live production for events, launches and conferences. Broadcast-quality streams that reach audiences anywhere — without losing impact.',
+      'Produção ao vivo multicâmara para eventos, lançamentos e conferências. Transmissões com qualidade broadcast que chegam a qualquer audiência — sem perder impacto.',
   },
 ]
 
@@ -164,7 +164,7 @@ export default function Work() {
               color: 'rgba(255,255,255,0.35)',
               marginBottom: '12px',
             }}>
-              What We Do
+              O Que Fazemos
             </p>
             <h2 style={{
               fontFamily: "'Delight', sans-serif",
@@ -175,10 +175,10 @@ export default function Work() {
               color: '#fff',
               margin: 0,
             }}>
-              Services
+              Serviços
             </h2>
             <p style={{ maxWidth: '560px', marginTop: '20px', fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '14px', lineHeight: 1.75, color: 'rgba(255,255,255,0.45)' }}>
-              Full-service production, from first concept to final broadcast — video, photography and live, under one roof.
+              Produção completa, do primeiro conceito à emissão final — vídeo, fotografia e live, tudo num só sítio.
             </p>
         </div>
 

@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'framer-motion'
 
 const stats = [
-  { num: 200,       suffix: '+',  label: 'Projects' },
-  { num: 6,         suffix: '',   label: 'Years' },
-  { num: 40,        suffix: '+',  label: 'Clients' },
-  { num: 1_000_000, suffix: '',   label: 'Views' },
+  { num: 200,       suffix: '+',  label: 'Projetos' },
+  { num: 6,         suffix: '',   label: 'Anos' },
+  { num: 40,        suffix: '+',  label: 'Clientes' },
+  { num: 1_000_000, suffix: '',   label: 'Visualizações' },
 ]
 
 function formatCount(count: number, suffix: string): string {
@@ -62,15 +62,15 @@ export default function About({ introDone }: { introDone: boolean }) {
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-6 leading-tight">
-            Every frame<br />
-            <span className="text-zinc-500">tells a story.</span>
+            Cada frame<br />
+            <span className="text-zinc-500">conta uma história.</span>
           </h2>
           <p className="text-zinc-400 leading-relaxed mb-4">
-            JAYD Productions is a visual production studio specializing in cinematic storytelling,
-            brand films, and editorial photography. We believe great visuals move people.
+            A JAYD Productions é um estúdio de produção visual especializado em storytelling
+            cinematográfico, brand films e fotografia editorial. Acreditamos que boas imagens movem pessoas.
           </p>
           <p className="text-zinc-500 leading-relaxed text-sm">
-            Based in Aveiro, working worldwide.
+            Sediados em Aveiro, a trabalhar em todo o mundo.
           </p>
         </div>
 

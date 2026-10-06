@@ -17,16 +17,16 @@ interface Message {
 }
 
 const messages: Message[] = [
-  { text: 'Cinematic Visuals',       top: '14%',    left: '6%',   delay: 0.8, maxOpacity: 0.40, size: 'text-[10px]' },
-  { text: 'Motion · Light · Emotion',bottom: '18%', right: '5%',  delay: 1.3, maxOpacity: 0.32, size: 'text-[9px]'  },
-  { text: 'Every Frame Matters',     top: '13%',    right: '7%',  delay: 1.8, maxOpacity: 0.36, size: 'text-[9px]'  },
-  { text: 'Visual Storytelling',     bottom: '22%', left: '4%',   delay: 2.3, maxOpacity: 0.32, size: 'text-[10px]' },
-  { text: 'Crafted with Purpose',    top: '44%',    right: '3%',  delay: 2.8, maxOpacity: 0.28, size: 'text-[9px]'  },
-  { text: 'From Vision to Screen',   top: '40%',    left: '3%',   delay: 3.3, maxOpacity: 0.30, size: 'text-[9px]'  },
+  { text: 'Visuais Cinematográficos',       top: '14%',    left: '6%',   delay: 0.8, maxOpacity: 0.40, size: 'text-[10px]' },
+  { text: 'Movimento · Luz · Emoção',bottom: '18%', right: '5%',  delay: 1.3, maxOpacity: 0.32, size: 'text-[9px]'  },
+  { text: 'Cada Frame Importa',     top: '13%',    right: '7%',  delay: 1.8, maxOpacity: 0.36, size: 'text-[9px]'  },
+  { text: 'Storytelling Visual',     bottom: '22%', left: '4%',   delay: 2.3, maxOpacity: 0.32, size: 'text-[10px]' },
+  { text: 'Feito com Propósito',    top: '44%',    right: '3%',  delay: 2.8, maxOpacity: 0.28, size: 'text-[9px]'  },
+  { text: 'Da Visão ao Ecrã',   top: '40%',    left: '3%',   delay: 3.3, maxOpacity: 0.30, size: 'text-[9px]'  },
   { text: 'Audio · Visual · Story',  top: '7%',     left: '37%',  delay: 1.0, maxOpacity: 0.18, size: 'text-[8px]'  },
-  { text: 'Premium Production',      bottom: '9%',  left: '34%',  delay: 3.8, maxOpacity: 0.24, size: 'text-[8px]'  },
-  { text: 'Beyond the Lens',         bottom: '30%', right: '4%',  delay: 4.2, maxOpacity: 0.22, size: 'text-[8px]'  },
-  { text: 'Directing Dreams',        top: '24%',    left: '38%',  delay: 4.6, maxOpacity: 0.16, size: 'text-[8px]'  },
+  { text: 'Produção Premium',      bottom: '9%',  left: '34%',  delay: 3.8, maxOpacity: 0.24, size: 'text-[8px]'  },
+  { text: 'Além da Lente',         bottom: '30%', right: '4%',  delay: 4.2, maxOpacity: 0.22, size: 'text-[8px]'  },
+  { text: 'A Realizar Sonhos',        top: '24%',    left: '38%',  delay: 4.6, maxOpacity: 0.16, size: 'text-[8px]'  },
 ]
 
 export default function LogoIntro({ onComplete }: Props) {
@@ -123,7 +123,7 @@ export default function LogoIntro({ onComplete }: Props) {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        Click or scroll to skip
+        Clica ou faz scroll para saltar
       </motion.p>
     </motion.div>
   )

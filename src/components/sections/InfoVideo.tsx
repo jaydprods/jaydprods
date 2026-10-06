@@ -32,7 +32,7 @@ export default function InfoVideo() {
           fontSize: '10px', letterSpacing: '0.4em', textTransform: 'uppercase',
           color: 'rgba(255,255,255,0.4)',
         }}>
-          International Partner
+          Parceiro Internacional
         </span>
         <div style={{ width: '24px', height: '1px', background: 'rgba(255,255,255,0.2)' }} />
       </div>
@@ -101,7 +101,7 @@ export default function InfoVideo() {
           color: 'rgba(255,255,255,0.45)',
           display: 'inline-flex', alignItems: 'center', gap: '8px',
         }}>
-          Largest CrossFit box in
+          O maior box de CrossFit da
           <svg width="18" height="18" viewBox="0 0 32 32" role="img" aria-label="Switzerland" style={{ borderRadius: '3px', flexShrink: 0, boxShadow: '0 0 0 1px rgba(255,255,255,0.12)' }}>
             <rect width="32" height="32" fill="#D52B1E" />
             <rect x="13" y="6.5" width="6" height="19" fill="#fff" />
