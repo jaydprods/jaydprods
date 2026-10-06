@@ -73,12 +73,12 @@ export const clients: Record<string, Client[]> = {
     },
     {
       id: 'ramalho',
-      name: 'Ramalho — Action Sports',
+      name: 'Ramalho — Personal Trainer & Creator',
       projects: [
         {
           id: 'ramalho-main',
-          title: 'Ramalho',
-          description: 'Vertical social content for Ramalho across skate, wakeboard and lifestyle. Fast, energetic edits built to capture movement and personality — made to stop the scroll.',
+          title: 'Trying New Sports',
+          description: 'An ongoing series with Ramalho — personal trainer and content creator — stepping out of his comfort zone to try a new sport in each episode. Vertical, high-energy lifestyle content made for social.',
           videos: [
             { id: 1, title: 'Skate', type: 'local', src: '/clients/ramalho/skate.mp4', portrait: true, thumb: '/clients/ramalho/skate-thumb.jpg' },
             { id: 2, title: 'Wakeboard', type: 'local', src: '/clients/ramalho/wakeboard.mp4', portrait: true, thumb: '/clients/ramalho/wakeboard-thumb.jpg' },
