@@ -155,8 +155,7 @@ export default function Work() {
     <section id="work" className="bg-black border-t border-zinc-900" style={{ padding: isMobile ? '64px 20px' : '96px 48px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between mb-16">
-          <div>
+        <div className="mb-16">
             <p style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: '10px',
@@ -178,10 +177,9 @@ export default function Work() {
             }}>
               Services
             </h2>
-          </div>
-          <p style={{ maxWidth: '340px', fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '13px', lineHeight: 1.75, color: 'rgba(255,255,255,0.45)' }}>
-            Full-service production, from first concept to final broadcast — video, photography and live, under one roof.
-          </p>
+            <p style={{ maxWidth: '560px', marginTop: '20px', fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '14px', lineHeight: 1.75, color: 'rgba(255,255,255,0.45)' }}>
+              Full-service production, from first concept to final broadcast — video, photography and live, under one roof.
+            </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-5">
