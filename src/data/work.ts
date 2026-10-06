@@ -193,6 +193,8 @@ export const clients: Record<string, Client[]> = {
         },
       ],
     },
+  ],
+  'corporate': [
     {
       id: 'acushla',
       name: 'Acushla — Natural Olive Oil',
@@ -220,8 +222,6 @@ export const clients: Record<string, Client[]> = {
         },
       ],
     },
-  ],
-  'corporate': [
     {
       id: 'ana-moreira-clinic',
       name: 'Ana Moreira Clinic — Health Center',
