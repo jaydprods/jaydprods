@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import Header from './components/Header'
 import SplitShowcase from './components/sections/SplitShowcase'
@@ -12,7 +12,6 @@ import LogoIntro from './components/LogoIntro'
 import WorkPage from './pages/WorkPage'
 import CategoryPage from './pages/CategoryPage'
 import ContactPage from './pages/ContactPage'
-import GalleryPage from './pages/GalleryPage'
 
 export default function App() {
   const [introDone, setIntroDone] = useState(false)
@@ -23,7 +22,6 @@ export default function App() {
       <Route path="/work" element={<WorkPage />} />
       <Route path="/work/:category" element={<CategoryPage />} />
       <Route path="/contact" element={<ContactPage />} />
-      <Route path="/feira-medieval-braganca" element={<GalleryPage />} />
 
       {/* Homepage */}
       <Route path="/" element={
@@ -48,6 +46,9 @@ export default function App() {
           </motion.main>
         </>
       } />
+
+      {/* Qualquer rota desconhecida (ex.: link antigo da galeria) → homepage */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
 }
