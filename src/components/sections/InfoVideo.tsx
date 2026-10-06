@@ -18,25 +18,39 @@ export default function InfoVideo() {
     <section style={{
       background: '#000',
       borderTop: '1px solid rgba(255,255,255,0.06)',
-      padding: isMobile ? '60px 16px' : '100px 48px',
+      padding: isMobile ? '64px 16px' : '100px 48px',
       display: 'flex',
-      justifyContent: 'center',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: isMobile ? '26px' : '36px',
     }}>
-      {/* Vídeo vertical 9:16 — centrado */}
+      {/* Eyebrow — parceiro internacional */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+        <div style={{ width: '24px', height: '1px', background: 'rgba(255,255,255,0.2)' }} />
+        <span style={{
+          fontFamily: "'Inter', sans-serif", fontWeight: 300,
+          fontSize: '10px', letterSpacing: '0.4em', textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.4)',
+        }}>
+          International Partner
+        </span>
+        <div style={{ width: '24px', height: '1px', background: 'rgba(255,255,255,0.2)' }} />
+      </div>
+
+      {/* Vídeo 16:9 — centrado */}
       <div style={{
         position: 'relative',
-        lineHeight: 0,
-        flexShrink: 0,
+        width: '100%',
+        maxWidth: '1000px',
+        aspectRatio: '16 / 9',
         overflow: 'hidden',
         borderRadius: '4px',
-        ...(isMobile
-          ? { width: '100%', aspectRatio: '9 / 16' }
-          : { height: 'min(78vh, 720px)', aspectRatio: '9 / 16' }
-        ),
+        background: '#0a0a0a',
+        lineHeight: 0,
       }}>
         <video
           ref={videoRef}
-          src="/tiago_info.mp4"
+          src="/crossfit_gleis10.mp4"
           style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover' }}
           autoPlay muted loop playsInline
         />
@@ -46,22 +60,12 @@ export default function InfoVideo() {
           onClick={toggleMute}
           title={muted ? 'Ativar som' : 'Desativar som'}
           style={{
-            position: 'absolute',
-            bottom: '24px',
-            right: '24px',
-            background: 'rgba(0,0,0,0.45)',
-            border: '1px solid rgba(255,255,255,0.25)',
-            borderRadius: '999px',
-            width: '38px',
-            height: '38px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            backdropFilter: 'blur(8px)',
-            transition: 'border-color 0.3s',
-            color: '#fff',
-            zIndex: 10,
+            position: 'absolute', bottom: '18px', right: '18px',
+            background: 'rgba(0,0,0,0.45)', border: '1px solid rgba(255,255,255,0.25)',
+            borderRadius: '999px', width: '38px', height: '38px',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            cursor: 'pointer', backdropFilter: 'blur(8px)', transition: 'border-color 0.3s',
+            color: '#fff', zIndex: 10,
           }}
           onMouseEnter={e => (e.currentTarget.style.borderColor = '#fff')}
           onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)')}
@@ -80,6 +84,24 @@ export default function InfoVideo() {
             </svg>
           )}
         </button>
+      </div>
+
+      {/* Legenda — cliente */}
+      <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+        <span style={{
+          fontFamily: "'Delight', sans-serif", fontWeight: 700,
+          fontSize: 'clamp(20px, 2.4vw, 28px)', letterSpacing: '0.04em',
+          textTransform: 'uppercase', color: '#fff',
+        }}>
+          CrossFit Gleis 10
+        </span>
+        <span style={{
+          fontFamily: "'Inter', sans-serif", fontWeight: 300,
+          fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase',
+          color: 'rgba(255,255,255,0.45)',
+        }}>
+          Switzerland&rsquo;s largest CrossFit box
+        </span>
       </div>
     </section>
   )
