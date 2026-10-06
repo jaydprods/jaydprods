@@ -16,6 +16,7 @@ export type Video = {
   src: string
   portrait?: boolean  // true para vídeos 9:16 verticais
   thumb?: string      // capa personalizada (path em /public)
+  coverPortrait?: boolean  // capa vertical 9:16 (vídeo em destaque)
 }
 
 export type Project = {
@@ -73,14 +74,14 @@ export const clients: Record<string, Client[]> = {
     },
     {
       id: 'ramalho',
-      name: 'Ramalho — Personal Trainer & Creator',
+      name: 'João Ramalho — Personal Trainer & Creator',
       projects: [
         {
           id: 'ramalho-main',
           title: 'Trying New Sports',
           description: 'An ongoing series with Ramalho — personal trainer and content creator — stepping out of his comfort zone to try a new sport in each episode. Vertical, high-energy lifestyle content made for social.',
           videos: [
-            { id: 1, title: 'Skate', type: 'local', src: '/clients/ramalho/skate.mp4', portrait: true, thumb: '/clients/ramalho/skate-thumb.jpg' },
+            { id: 1, title: 'Skate', type: 'local', src: '/clients/ramalho/skate.mp4', portrait: true, coverPortrait: true, thumb: '/clients/ramalho/skate-thumb.jpg' },
             { id: 2, title: 'Wakeboard', type: 'local', src: '/clients/ramalho/wakeboard.mp4', portrait: true, thumb: '/clients/ramalho/wakeboard-thumb.jpg' },
             { id: 3, title: 'Nutrition', type: 'local', src: '/clients/ramalho/nutri.mp4', portrait: true, thumb: '/clients/ramalho/nutri-thumb.jpg' },
           ],

@@ -276,7 +276,7 @@ function VideoLightbox({ title, type, src, portrait, onClose }: Omit<Video, 'id'
 }
 
 // ─── VIDEO EMBED ──────────────────────────────────────────────────────────────
-function VideoEmbed({ title, type, src, portrait, thumb }: Video) {
+function VideoEmbed({ title, type, src, portrait, thumb, coverPortrait }: Video) {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [playing,      setPlaying]      = useState(false)
   const [loaded,       setLoaded]       = useState(false)
@@ -296,7 +296,10 @@ function VideoEmbed({ title, type, src, portrait, thumb }: Video) {
         <div
           className="group"
           onClick={() => setLightboxOpen(true)}
-          style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', background: '#000', cursor: 'pointer' }}
+          style={coverPortrait
+            ? { position: 'relative', width: '100%', maxWidth: '380px', margin: '0 auto', aspectRatio: '9/16', overflow: 'hidden', background: '#000', cursor: 'pointer' }
+            : { position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', background: '#000', cursor: 'pointer' }
+          }
         >
           <img
             src={thumb}
