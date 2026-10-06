@@ -441,8 +441,15 @@ function ProjectBlock({ title, description, videos = [], photos = [], process = 
       {extraVideos.length > 0 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
           <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>More Videos</span>
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: '3px' }}>
-            {extraVideos.map(v => <VideoEmbed key={v.id} {...v} />)}
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: isMobile ? '16px' : '20px' }}>
+            {extraVideos.map(v => (
+              <div key={v.id} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <VideoEmbed {...v} />
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textAlign: 'center' }}>
+                  {v.title}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       )}
