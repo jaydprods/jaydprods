@@ -88,27 +88,25 @@ export default function InfoVideo() {
 
       {/* Legenda — cliente */}
       <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          {/* Bandeira da Suíça */}
-          <svg width="22" height="22" viewBox="0 0 32 32" role="img" aria-label="Switzerland" style={{ borderRadius: '3px', flexShrink: 0, boxShadow: '0 0 0 1px rgba(255,255,255,0.12)' }}>
-            <rect width="32" height="32" fill="#D52B1E" />
-            <rect x="13" y="6.5" width="6" height="19" fill="#fff" />
-            <rect x="6.5" y="13" width="19" height="6" fill="#fff" />
-          </svg>
-          <span style={{
-            fontFamily: "'Delight', sans-serif", fontWeight: 700,
-            fontSize: 'clamp(20px, 2.4vw, 28px)', letterSpacing: '0.04em',
-            textTransform: 'uppercase', color: '#fff',
-          }}>
-            CrossFit Gleis 10
-          </span>
-        </div>
+        <span style={{
+          fontFamily: "'Delight', sans-serif", fontWeight: 700,
+          fontSize: 'clamp(20px, 2.4vw, 28px)', letterSpacing: '0.04em',
+          textTransform: 'uppercase', color: '#fff',
+        }}>
+          CrossFit Gleis 10
+        </span>
         <span style={{
           fontFamily: "'Inter', sans-serif", fontWeight: 300,
           fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase',
           color: 'rgba(255,255,255,0.45)',
+          display: 'inline-flex', alignItems: 'center', gap: '8px',
         }}>
-          Switzerland&rsquo;s largest CrossFit box
+          Largest CrossFit box in
+          <svg width="18" height="18" viewBox="0 0 32 32" role="img" aria-label="Switzerland" style={{ borderRadius: '3px', flexShrink: 0, boxShadow: '0 0 0 1px rgba(255,255,255,0.12)' }}>
+            <rect width="32" height="32" fill="#D52B1E" />
+            <rect x="13" y="6.5" width="6" height="19" fill="#fff" />
+            <rect x="6.5" y="13" width="19" height="6" fill="#fff" />
+          </svg>
         </span>
       </div>
     </section>
