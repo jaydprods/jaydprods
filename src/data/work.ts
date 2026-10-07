@@ -249,6 +249,73 @@ export const clients: Record<string, Client[]> = {
         },
       ],
     },
+  ],
+  'events': [
+    {
+      id: 'vagos-sensation-gourmet',
+      name: 'Vagos Sensation Gourmet — Praia da Vagueira',
+      projects: [
+        {
+          id: 'vagos-main',
+          title: '2026',
+          description: 'Social content for Vagos Sensation Gourmet, the gourmet food festival at Praia da Vagueira. Vertical reels capturing the atmosphere, energy and flavours of the event.',
+          videos: [
+            { id: 1, title: 'Vagos Sensation Gourmet', type: 'local', src: '/clients/vagos-sensation-gourmet/video1.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel1-thumb.jpg' },
+            { id: 2, title: 'Dia 1', type: 'local', src: '/clients/vagos-sensation-gourmet/video2.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel2-thumb.jpg' },
+            { id: 3, title: 'Dia 2', type: 'local', src: '/clients/vagos-sensation-gourmet/video3.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel3-thumb.jpg' },
+            { id: 4, title: 'Dia 3', type: 'local', src: '/clients/vagos-sensation-gourmet/video4.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel4-thumb.jpg' },
+            { id: 5, title: 'Dia 4', type: 'local', src: '/clients/vagos-sensation-gourmet/video5.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel5-thumb.jpg' },
+            { id: 6, title: 'Dia 5', type: 'local', src: '/clients/vagos-sensation-gourmet/video6.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel6-thumb.jpg' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'festa-historia-braganca',
+      name: 'Festa da História Bragança',
+      projects: [
+        {
+          id: 'festa-2026',
+          title: '2026',
+          description: 'The 2026 edition of Festa da História de Bragança — three days capturing the medieval city come to life, from the official aftermovie to the historic fair.',
+          videos: [
+            { id: 1, title: 'Dia 14 — Oficial',  type: 'local', src: '/clients/festa-da-historia/2026/dia14.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia14-thumb.jpg' },
+            { id: 2, title: 'Dia 16',            type: 'local', src: '/clients/festa-da-historia/2026/dia16.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia16-thumb.jpg' },
+            { id: 3, title: 'Dia 17 — Feira',    type: 'local', src: '/clients/festa-da-historia/2026/dia17.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia17-thumb.jpg' },
+          ],
+        },
+        {
+          id: 'festa-2025',
+          title: '2025',
+          description: 'Coverage of the 2025 edition of Festa da História de Bragança.',
+          videos: [
+            { id: 1, title: 'Festa da História', type: 'gumlet', src: '69e79232ed3ab5a35435d318', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e79232ed3ab5a35435d318/thumbnail-1-0.png' },
+            { id: 2, title: 'Festa da História', type: 'gumlet', src: '69e79212aed638b82a99d299', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e79212aed638b82a99d299/thumbnail-1-0.png' },
+            { id: 3, title: 'Festa da História', type: 'gumlet', src: '69e792024fc3fe661c989f87', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792024fc3fe661c989f87/thumbnail-1-0.png' },
+          ],
+        },
+        {
+          id: 'festa-2024',
+          title: '2024',
+          description: 'Coverage of the 2024 edition of Festa da História de Bragança.',
+          videos: [
+            { id: 1, title: 'Festa da História', type: 'gumlet', src: '69e792484fc3fe661c98a819', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792484fc3fe661c98a819/thumbnail-1-0.png' },
+            { id: 2, title: 'Festa da História', type: 'gumlet', src: '69e7925d4fc3fe661c98ab2a', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e7925d4fc3fe661c98ab2a/thumbnail-1-0.png' },
+            { id: 3, title: 'Festa da História', type: 'gumlet', src: '69e792724fc3fe661c98adf4', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792724fc3fe661c98adf4/thumbnail-1-0.png' },
+          ],
+          photos: [
+            '/clients/festa-da-historia/DSC04714.jpg',
+            '/clients/festa-da-historia/DSC04756.jpg',
+            '/clients/festa-da-historia/DSC04781.jpg',
+            '/clients/festa-da-historia/DSC04785.jpg',
+            '/clients/festa-da-historia/DSC04792.jpg',
+            '/clients/festa-da-historia/DSC04796.jpg',
+            '/clients/festa-da-historia/DSC04805.jpg',
+            '/clients/festa-da-historia/DSC04821-2.jpg',
+          ],
+        },
+      ],
+    },
     {
       id: 'cmi',
       name: 'CMI — Congress Medicine Integrative',
@@ -285,56 +352,6 @@ export const clients: Record<string, Client[]> = {
             '/clients/cmi/DSC07561.jpg',
             '/clients/cmi/DSC07597.jpg',
             '/clients/cmi/DSC07684.jpg',
-          ],
-        },
-      ],
-    },
-  ],
-  'events': [
-    {
-      id: 'vagos-sensation-gourmet',
-      name: 'Vagos Sensation Gourmet — Praia da Vagueira',
-      projects: [
-        {
-          id: 'vagos-main',
-          title: 'Vagos Sensation Gourmet',
-          description: 'Social content for Vagos Sensation Gourmet, the gourmet food festival at Praia da Vagueira. Vertical reels capturing the atmosphere, energy and flavours of the event.',
-          videos: [
-            { id: 1, title: 'Vagos Sensation Gourmet', type: 'local', src: '/clients/vagos-sensation-gourmet/video1.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel1-thumb.jpg' },
-            { id: 2, title: 'Dia 1', type: 'local', src: '/clients/vagos-sensation-gourmet/video2.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel2-thumb.jpg' },
-            { id: 3, title: 'Dia 2', type: 'local', src: '/clients/vagos-sensation-gourmet/video3.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel3-thumb.jpg' },
-            { id: 4, title: 'Dia 3', type: 'local', src: '/clients/vagos-sensation-gourmet/video4.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel4-thumb.jpg' },
-            { id: 5, title: 'Dia 4', type: 'local', src: '/clients/vagos-sensation-gourmet/video5.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel5-thumb.jpg' },
-            { id: 6, title: 'Dia 5', type: 'local', src: '/clients/vagos-sensation-gourmet/video6.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel6-thumb.jpg' },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'festa-historia-braganca',
-      name: 'Festa da História Bragança',
-      projects: [
-        {
-          id: 'festa-historia-main',
-          title: 'Festa da História',
-          description: 'Festa da História de Bragança is an annual event that transforms the city\'s historic center and castle into a true medieval setting. It offers a unique and immersive atmosphere, where history comes to life with a strong sense of authenticity and visual richness.',
-          videos: [
-            { id: 1, title: 'Festa da História', type: 'gumlet', src: '69e792484fc3fe661c98a819', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792484fc3fe661c98a819/thumbnail-1-0.png' },
-            { id: 2, title: 'Festa da História 2024', type: 'gumlet', src: '69e7925d4fc3fe661c98ab2a', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e7925d4fc3fe661c98ab2a/thumbnail-1-0.png' },
-            { id: 3, title: 'Festa da História 2024', type: 'gumlet', src: '69e792724fc3fe661c98adf4', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792724fc3fe661c98adf4/thumbnail-1-0.png' },
-            { id: 4, title: 'Festa da História 2025', type: 'gumlet', src: '69e79232ed3ab5a35435d318', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e79232ed3ab5a35435d318/thumbnail-1-0.png' },
-            { id: 5, title: 'Festa da História 2025', type: 'gumlet', src: '69e79212aed638b82a99d299', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e79212aed638b82a99d299/thumbnail-1-0.png' },
-            { id: 6, title: 'Festa da História 2025', type: 'gumlet', src: '69e792024fc3fe661c989f87', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792024fc3fe661c989f87/thumbnail-1-0.png' },
-          ],
-          photos: [
-            '/clients/festa-da-historia/DSC04714.jpg',
-            '/clients/festa-da-historia/DSC04756.jpg',
-            '/clients/festa-da-historia/DSC04781.jpg',
-            '/clients/festa-da-historia/DSC04785.jpg',
-            '/clients/festa-da-historia/DSC04792.jpg',
-            '/clients/festa-da-historia/DSC04796.jpg',
-            '/clients/festa-da-historia/DSC04805.jpg',
-            '/clients/festa-da-historia/DSC04821-2.jpg',
           ],
         },
       ],
