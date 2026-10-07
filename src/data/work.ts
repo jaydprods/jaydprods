@@ -272,7 +272,7 @@ export const clients: Record<string, Client[]> = {
     },
     {
       id: 'festa-historia-braganca',
-      name: 'Festa da História Bragança',
+      name: 'Feira Medieval Bragança — Festa da História',
       projects: [
         {
           id: 'festa-2026',
