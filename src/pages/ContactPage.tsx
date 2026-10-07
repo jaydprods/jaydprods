@@ -62,10 +62,10 @@ export default function ContactPage() {
           maxWidth: isMobile ? '320px' : 'none',
         }}>
           {[
-            { label: 'WhatsApp', href: whatsapp, external: true },
-            { label: 'Instagram', href: 'https://www.instagram.com/jaydprods/', external: true },
-            { label: 'Email', href: 'mailto:jaydprods@gmail.com', external: false },
-          ].map(({ label, href, external }) => (
+            { label: 'WhatsApp', href: whatsapp, external: true, primary: true },
+            { label: 'Instagram', href: 'https://www.instagram.com/jaydprods/', external: true, primary: false },
+            { label: 'Email', href: 'mailto:jaydprods@gmail.com', external: false, primary: false },
+          ].map(({ label, href, external, primary }) => (
             <a
               key={label}
               href={href}
@@ -73,17 +73,24 @@ export default function ContactPage() {
               style={{
                 display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                 gap: '10px',
-                border: '1px solid rgba(255,255,255,0.25)',
+                border: primary ? '1px solid #fff' : '1px solid rgba(255,255,255,0.25)',
                 borderRadius: '999px',
                 padding: '18px 48px',
                 width: isMobile ? '100%' : 'auto',
-                fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: '11px',
+                fontFamily: "'Inter', sans-serif", fontWeight: primary ? 600 : 400, fontSize: '11px',
                 letterSpacing: '0.15em', textTransform: 'uppercase',
-                color: '#fff', textDecoration: 'none', background: 'transparent',
+                color: primary ? '#000' : '#fff', textDecoration: 'none',
+                background: primary ? '#fff' : 'transparent',
                 transition: 'border-color 0.3s, background 0.3s, color 0.3s',
               }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = '#fff'; e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#000' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#fff' }}
+              onMouseEnter={e => {
+                if (primary) { e.currentTarget.style.background = 'rgba(255,255,255,0.85)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.85)' }
+                else { e.currentTarget.style.borderColor = '#fff'; e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#000' }
+              }}
+              onMouseLeave={e => {
+                if (primary) { e.currentTarget.style.background = '#fff'; e.currentTarget.style.borderColor = '#fff' }
+                else { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#fff' }
+              }}
             >
               {label}
             </a>
