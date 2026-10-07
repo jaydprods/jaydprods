@@ -1,11 +1,11 @@
 // ─── CATEGORIAS ───────────────────────────────────────────────────────────────
 export const categories = [
-  { id: 'sports',      label: 'Desporto',      cover: '/covers/sports.jpg',       objectPosition: 'center'        },
-  { id: 'commercial',  label: 'Comercial',  cover: '/covers/corporate.jpg',    objectPosition: 'center bottom' },
-  { id: 'music',       label: 'Música',       cover: '/covers/music-videos.jpg', objectPosition: 'center'        },
-  { id: 'wedding',     label: 'Casamentos',    cover: '/covers/wedding.jpg',      objectPosition: 'center'        },
-  { id: 'events',      label: 'Eventos',      cover: '/covers/events.jpg',       objectPosition: 'center'        },
-  { id: 'coming-soon', label: 'Em Breve', cover: '/covers/coming-soon.jpg',  objectPosition: 'center'        },
+  { id: 'sports',      label: 'Sports',      cover: '/covers/sports.jpg',       objectPosition: 'center'        },
+  { id: 'commercial',  label: 'Commercial',  cover: '/covers/corporate.jpg',    objectPosition: 'center bottom' },
+  { id: 'music',       label: 'Music',       cover: '/covers/music-videos.jpg', objectPosition: 'center'        },
+  { id: 'wedding',     label: 'Weddings',    cover: '/covers/wedding.jpg',      objectPosition: 'center'        },
+  { id: 'events',      label: 'Events',      cover: '/covers/events.jpg',       objectPosition: 'center'        },
+  { id: 'coming-soon', label: 'Coming Soon', cover: '/covers/coming-soon.jpg',  objectPosition: 'center'        },
 ]
 
 // ─── TIPOS ────────────────────────────────────────────────────────────────────
@@ -44,7 +44,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'cfg10-main',
           title: 'CrossFit Gleis 10',
-          description: 'An ongoing content partnership with CrossFit Gleis 10 — Switzerland\'s largest CrossFit box. A series of vertical films spotlighting athletes, coaches and events, produced to grow the brand across social.',
+          description: 'Uma parceria de conteúdo contínua com o CrossFit Gleis 10 — o maior box de CrossFit da Suíça. Uma série de vídeos verticais que destacam atletas, treinadores e eventos, produzida para fazer crescer a marca nas redes sociais.',
           videos: [
             { id: 1, title: 'Was ist Hyrox', type: 'local', src: '/clients/crossfit-gleis10/hyrox.mp4', portrait: true, coverPortrait: true, thumb: '/clients/crossfit-gleis10/hyrox-thumb.jpg' },
             { id: 2, title: 'Competition Reel', type: 'local', src: '/clients/crossfit-gleis10/reel.mp4', portrait: true, coverPortrait: true, thumb: '/clients/crossfit-gleis10/reel-thumb.jpg' },
@@ -66,7 +66,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'fight-teaser',
           title: 'Fight Teaser',
-          description: 'Behind every champion, there is a story worth telling. For the World Fighting League, we worked alongside Tiago to craft a production where light, composition and movement serve one purpose — to build anticipation for what\'s coming to the Netherlands.',
+          description: 'Por trás de cada campeão há uma história que merece ser contada. Para a World Fighting League, trabalhámos com o Tiago numa produção onde a luz, a composição e o movimento servem um único propósito — criar expectativa para o que aí vem nos Países Baixos.',
           videos: [
             { id: 1, title: 'Fight Teaser', type: 'vimeo', src: '1184939583', portrait: true, thumb: '/clients/tiago-santos/MH7A7867.jpg' },
           ],
@@ -101,7 +101,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'ramalho-main',
           title: 'Trying New Sports',
-          description: 'An ongoing series with Ramalho — personal trainer and content creator — stepping out of his comfort zone to try a new sport in each episode. Vertical, high-energy lifestyle content made for social.',
+          description: 'Uma série contínua com o Ramalho — personal trainer e criador de conteúdo — a sair da zona de conforto para experimentar um desporto novo em cada episódio. Conteúdo lifestyle vertical e cheio de energia, feito para redes sociais.',
           videos: [
             { id: 1, title: 'Skate', type: 'local', src: '/clients/ramalho/skate.mp4', portrait: true, coverPortrait: true, thumb: '/clients/ramalho/skate-thumb.jpg' },
             { id: 2, title: 'Wakeboard', type: 'local', src: '/clients/ramalho/wakeboard.mp4', portrait: true, thumb: '/clients/ramalho/wakeboard-thumb.jpg' },
@@ -117,7 +117,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'all-in-main',
           title: 'All In',
-          description: 'Monthly content creation for All In Studio, focused on photography and video. The work captures the energy, environment, and identity of the space through a clean and consistent visual approach, strengthening the brand\'s presence across digital platforms.',
+          description: 'Criação de conteúdo mensal para o All In Studio, focada em fotografia e vídeo. O trabalho capta a energia, o ambiente e a identidade do espaço através de uma abordagem visual limpa e consistente, reforçando a presença da marca nas plataformas digitais.',
           videos: [
             { id: 1, title: 'All In', type: 'vimeo', src: '1184996757', portrait: true, thumb: '/clients/all-in/DSC09585.jpg' },
           ],
@@ -140,7 +140,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'hybrid-day-main',
           title: 'Hybrid Day',
-          description: 'Hybrid Day is a high-energy fitness event that brings together performance, community, and competition. I was brought in by the international brand Endure to produce a video for the event. The final result captured the intensity and atmosphere perfectly, delivering a strong and impactful visual piece.',
+          description: 'O Hybrid Day é um evento de fitness cheio de energia que junta performance, comunidade e competição. Fui chamado pela marca internacional Endure para produzir um vídeo do evento. O resultado final captou a intensidade e o ambiente na perfeição, entregando uma peça visual forte e impactante.',
           videos: [
             { id: 1, title: 'Hybrid Day', type: 'vimeo', src: '1185007283', portrait: false, thumb: '/clients/hybrid-day/DSC08950-2.jpg' },
           ],
@@ -174,7 +174,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'umpercento-main',
           title: 'Umpercento',
-          description: 'UMPERCENTO was born in the need to represent the journey. We guide those who have a dream, and inspire them to make it a goal. For those who aspire to stand out, the 1% is also a challenge.',
+          description: 'A UMPERCENTO nasceu da necessidade de representar o percurso. Guiamos quem tem um sonho e inspiramo-los a transformá-lo num objetivo. Para quem quer destacar-se, o 1% é também um desafio.',
           videos: [
             { id: 1, title: 'Umpercento', type: 'vimeo', src: '1067124685', portrait: true, thumb: '/clients/umpercento/DSC00807.jpg' },
           ],
@@ -200,7 +200,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'acushla-main',
           title: 'Acushla',
-          description: 'Producing one of the world\'s finest olive oils in full respect for nature and the environment, contributing to a better and healthier planet.',
+          description: 'A produzir um dos melhores azeites do mundo com total respeito pela natureza e pelo ambiente, contribuindo para um planeta melhor e mais saudável.',
           videos: [
             { id: 1, title: 'Acushla', type: 'vimeo', src: '1185161489', portrait: false, thumb: '/clients/acushla/capavideo.jpg' },
           ],
@@ -227,7 +227,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'ana-moreira-main',
           title: 'Ana Moreira Clinic',
-          description: 'Based in Porto, the clinic led by Dr. Ana Moreira focuses on integrative medicine, combining scientific knowledge with a holistic approach to health. The work centers on understanding the individual as a whole, emphasizing prevention, balance, and long-term well-being through personalized care.',
+          description: 'Sediada no Porto, a clínica liderada pela Dra. Ana Moreira foca-se na medicina integrativa, combinando conhecimento científico com uma abordagem holística à saúde. O trabalho centra-se em compreender o indivíduo como um todo, valorizando a prevenção, o equilíbrio e o bem-estar a longo prazo através de um cuidado personalizado.',
           videos: [
             { id: 1, title: 'Ana Moreira Clinic', type: 'gumlet', src: '69e787b34fc3fe661c9775c0', portrait: false, thumb: '/clients/ana-moreira/DSC04695.jpg' },
             { id: 2, title: 'Ana Moreira Clinic', type: 'gumlet', src: '69e7882fed3ab5a35434b08a', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e7882fed3ab5a35434b08a/thumbnail-1-0.png' },
@@ -366,7 +366,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'sould-il-1',
           title: 'Sould Il — Video I',
-          description: 'A warm and romantic music video set in a summer-like atmosphere, reflecting themes of love, desire, and emotional freedom. The visuals enhance the song\'s sensual and effortless vibe, creating a timeless piece that can be felt anywhere, at any moment.',
+          description: 'Um videoclip quente e romântico, ambientado numa atmosfera de verão, que reflete temas de amor, desejo e liberdade emocional. As imagens realçam o lado sensual e descontraído da música, criando uma peça intemporal que se sente em qualquer lugar, a qualquer momento.',
           videos: [
             { id: 1, title: 'Sould Il', type: 'youtube', src: 'Uos6x_5sArU', portrait: false },
           ],
@@ -384,7 +384,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'sould-il-2',
           title: 'Sould Il — Video II',
-          description: 'A powerful and intense live performance video, filmed on stage in front of an audience. With cold undertones and raw energy, the trio—joined by a guitarist—delivers an explosive performance driven by voice, emotion, and presence, capturing a sense of chaos and artistic freedom.',
+          description: 'Um vídeo de atuação ao vivo intenso e poderoso, filmado em palco perante o público. Com tons frios e energia crua, o trio — acompanhado por um guitarrista — entrega uma atuação explosiva movida pela voz, pela emoção e pela presença, captando uma sensação de caos e liberdade artística.',
           videos: [
             { id: 1, title: 'Sould Il', type: 'youtube', src: 'OF15np9nHjs', portrait: false },
           ],
@@ -416,7 +416,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'pisco-1',
           title: 'Pisco — Quantas Vezes',
-          description: 'A reflective rap piece that explores the necessity of failure and mistakes as part of personal growth. Pisco blends raw everyday realities with introspective storytelling, never losing sight of love and emotion. A young romantic at heart, he balances honesty and vulnerability, turning life lessons into a grounded and meaningful narrative.',
+          description: 'Uma peça de rap introspetiva que explora a necessidade do fracasso e dos erros como parte do crescimento pessoal. O Pisco mistura as realidades cruas do dia a dia com um storytelling introspetivo, sem nunca perder de vista o amor e a emoção. Romântico de coração, equilibra honestidade e vulnerabilidade, transformando as lições de vida numa narrativa sólida e com significado.',
           videos: [
             { id: 1, title: 'Pisco — Quantas Vezes', type: 'youtube', src: 'fpxr4L52zBA', portrait: false },
           ],
@@ -436,7 +436,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'pisco-2',
           title: 'Pisco — Sessão de Jazz',
-          description: 'A live studio performance where Pisco reflects on his musical journey through smooth jazz-inspired rhythms and laid-back beats. In an intimate setting, he performs with raw honesty, using writing as a form of release and self-expression. Trusting the process and embracing destiny, he shares that music is not an obligation, but a natural path—his only goal is to keep writing.',
+          description: 'Uma atuação ao vivo em estúdio onde o Pisco reflete sobre o seu percurso musical através de ritmos inspirados no jazz e batidas descontraídas. Num ambiente intimista, atua com honestidade crua, usando a escrita como forma de libertação e expressão. Confiando no processo e abraçando o destino, partilha que a música não é uma obrigação, mas um caminho natural — o seu único objetivo é continuar a escrever.',
           videos: [
             { id: 1, title: 'Pisco — Sessão de Jazz', type: 'youtube', src: 'B2U0WKRhazo', portrait: false },
           ],
@@ -486,7 +486,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'baptizado-main',
           title: 'Baptism & 25 Years',
-          description: 'A family celebration film — the baptism and 25th anniversary of Alexandra, filmed with the same cinematic care as a wedding day.',
+          description: 'Um filme de celebração em família — o baptizado e os 25 anos da Alexandra, filmado com o mesmo cuidado cinematográfico de um dia de casamento.',
           videos: [
             { id: 1, title: 'Baptism & 25 Years', type: 'local', src: '/clients/baptizado-alexandra/video.mp4', portrait: false, thumb: '/clients/baptizado-alexandra/thumb.jpg' },
           ],
