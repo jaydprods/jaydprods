@@ -10,20 +10,22 @@ export default function ContactPage() {
   return (
     <div style={{ background: '#000', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <style>{`
-        @keyframes jaydGlow {
-          0%, 100% { background-position: 200% center; }
-          50%      { background-position: 0% center; }
+        @keyframes ctaShine {
+          0%        { transform: translateX(-120%); }
+          55%, 100% { transform: translateX(120%); }
         }
-        .contact-glow {
-          background: linear-gradient(100deg, rgba(255,255,255,0.26) 25%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.26) 75%);
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
-          color: transparent;
-          animation: jaydGlow 7s ease-in-out infinite;
+        .cta-shine { position: relative; overflow: hidden; }
+        .cta-shine::before {
+          content: '';
+          position: absolute; inset: 0;
+          background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.22) 50%, transparent 65%);
+          transform: translateX(-120%);
+          animation: ctaShine 4.5s ease-in-out infinite;
+          pointer-events: none;
         }
-        @media (prefers-reduced-motion: reduce) { .contact-glow { animation: none; } }
+        .cta-shine:nth-child(2)::before { animation-delay: 1.2s; }
+        .cta-shine:nth-child(3)::before { animation-delay: 2.4s; }
+        @media (prefers-reduced-motion: reduce) { .cta-shine::before { animation: none; } }
       `}</style>
 
       {/* Header */}
@@ -63,7 +65,7 @@ export default function ContactPage() {
           <h1 style={{ fontFamily: "'Delight', sans-serif", fontWeight: 700, fontSize: 'clamp(48px, 8vw, 100px)', letterSpacing: '0.04em', textTransform: 'uppercase', color: '#fff', margin: 0, lineHeight: 1 }}>
             Vamos Falar
           </h1>
-          <p className="contact-glow" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '15px', lineHeight: 1.8, margin: 0, maxWidth: '480px' }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '15px', lineHeight: 1.8, color: 'rgba(255,255,255,0.4)', margin: 0, maxWidth: '480px' }}>
             Tens um projeto em mente? Fala comigo e vamos pensar no que podemos criar juntos.
           </p>
         </div>
@@ -83,6 +85,7 @@ export default function ContactPage() {
             { label: 'Email', href: 'mailto:jaydprods@gmail.com', external: false },
           ].map(({ label, href, external }) => (
             <a
+              className="cta-shine"
               key={label}
               href={href}
               {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
