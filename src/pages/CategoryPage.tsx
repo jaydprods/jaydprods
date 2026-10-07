@@ -391,24 +391,24 @@ function ProjectBlock({ title, description, videos = [], photos = [], process = 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? '48px' : '88px', padding: '40px 0' }}>
 
-      {/* Título */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+      {/* Título da secção (ano) — oculto quando vazio */}
+      {title && (<div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
         <div style={{ width: '20px', height: '1px', background: 'rgba(255,255,255,0.18)', flexShrink: 0 }} />
         <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>
           {title}
         </span>
         <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.06)' }} />
-      </div>
+      </div>)}
 
-      {/* Vídeo + Conceito */}
+      {/* Vídeo em destaque + descrição */}
       {(hasVideo || description) && (() => {
         const hasCover = hasVideo && mainVideo.thumb
         return hasCover ? (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Short Film</span>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
             <VideoEmbed {...mainVideo} />
+            {extraVideos.length > 0 && mainVideo.title && <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', textAlign: 'center' }}>{mainVideo.title}</span>}
             {description && (
-              <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: isMobile ? '16px' : '18px', lineHeight: 1.85, color: 'rgba(255,255,255,0.55)', margin: 0, marginTop: '46px', textAlign: 'center' }}>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: isMobile ? '16px' : '18px', lineHeight: 1.85, color: 'rgba(255,255,255,0.55)', margin: 0, marginTop: '32px', textAlign: 'center', maxWidth: '680px', marginLeft: 'auto', marginRight: 'auto' }}>
                 {description}
               </p>
             )}
@@ -421,14 +421,14 @@ function ProjectBlock({ title, description, videos = [], photos = [], process = 
             alignItems: 'center',
           }}>
             {hasVideo && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Short Film</span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <VideoEmbed {...mainVideo} />
+                {extraVideos.length > 0 && mainVideo.title && <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '12px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', textAlign: 'center' }}>{mainVideo.title}</span>}
               </div>
             )}
             {description && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '8px', letterSpacing: '0.4em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.2)' }}>Concept</span>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '8px', letterSpacing: '0.4em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.2)' }}>Conceito</span>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: isMobile ? '16px' : '18px', lineHeight: 1.85, color: 'rgba(255,255,255,0.55)', margin: 0 }}>
                   {description}
                 </p>
@@ -438,40 +438,42 @@ function ProjectBlock({ title, description, videos = [], photos = [], process = 
         )
       })()}
 
-      {/* Galeria */}
-      {hasPhotos && (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Photography</span>
-          <PhotoViewer photos={photos} />
-        </div>
-      )}
-
-      {/* More Videos */}
+      {/* Mais vídeos */}
       {extraVideos.length > 0 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>More Videos</span>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Mais Vídeos</span>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: isMobile ? '16px' : '20px' }}>
             {extraVideos.map(v => (
               <div key={v.id} style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 <VideoEmbed {...v} />
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textAlign: 'center' }}>
-                  {v.title}
-                </span>
+                {v.title && (
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textAlign: 'center' }}>
+                    {v.title}
+                  </span>
+                )}
               </div>
             ))}
           </div>
         </div>
       )}
 
+      {/* Galeria de fotos (depois dos vídeos) */}
+      {hasPhotos && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Fotografia</span>
+          <PhotoViewer photos={photos} />
+        </div>
+      )}
+
       {/* Processo */}
       {hasProcess && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Process</span>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Processo</span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'center' }}>
             {process.map((src, i) => (
               <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', width: isMobile ? '100%' : '80%' }}>
-                <img src={src} alt="Process" draggable={false} style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '2px' }} />
-                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Timeline screenshot</span>
+                <img src={src} alt="Processo" draggable={false} style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '2px' }} />
+                <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)' }}>Captura da timeline</span>
               </div>
             ))}
           </div>
@@ -579,7 +581,7 @@ export default function CategoryPage() {
           <button onClick={() => navigate('/work')} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)' }}
             onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
             onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.3)')}>
-            Work
+            Portfólio
           </button>
           <span style={{ color: 'rgba(255,255,255,0.2)', fontSize: '11px' }}>→</span>
           <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff' }}>{cat.label}</span>

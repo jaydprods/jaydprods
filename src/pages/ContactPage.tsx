@@ -24,10 +24,10 @@ export default function ContactPage() {
           <button onClick={() => navigate('/')} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', transition: 'color 0.2s' }}
             onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
             onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.3)')}>
-            Home
+            Início
           </button>
           <span style={{ color: 'rgba(255,255,255,0.2)', fontSize: '11px' }}>→</span>
-          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff' }}>Contact</span>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#fff' }}>Contacto</span>
         </div>
       </div>
 
@@ -42,13 +42,13 @@ export default function ContactPage() {
         {/* CTA principal */}
         <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
           <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '10px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', margin: 0 }}>
-            New project?
+            Novo projeto?
           </p>
           <h1 style={{ fontFamily: "'Delight', sans-serif", fontWeight: 700, fontSize: 'clamp(48px, 8vw, 100px)', letterSpacing: '0.04em', textTransform: 'uppercase', color: '#fff', margin: 0, lineHeight: 1 }}>
-            Let's Chat.
+            Vamos Falar.
           </h1>
           <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '15px', lineHeight: 1.8, color: 'rgba(255,255,255,0.4)', margin: 0, maxWidth: '480px' }}>
-            Have a project in mind? Reach out and let's talk about what we can build together.
+            Tens um projeto em mente? Fala comigo e vamos pensar no que podemos criar juntos.
           </p>
         </div>
 
@@ -96,12 +96,12 @@ export default function ContactPage() {
         {/* Info de contacto */}
         <div style={{ display: 'flex', gap: isMobile ? '40px' : '80px', flexWrap: 'wrap', justifyContent: 'center' }}>
           <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '9px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>Location</span>
+            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '9px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>Localização</span>
             <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>Aveiro, Portugal</span>
           </div>
           <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '9px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>Based in</span>
-            <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>Available Worldwide</span>
+            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '9px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>Disponibilidade</span>
+            <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>Em todo o mundo</span>
           </div>
         </div>
 

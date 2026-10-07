@@ -1,11 +1,11 @@
 // ─── CATEGORIAS ───────────────────────────────────────────────────────────────
 export const categories = [
-  { id: 'sports',      label: 'Sports',      cover: '/covers/sports.jpg',       objectPosition: 'center'        },
-  { id: 'commercial',  label: 'Commercial',  cover: '/covers/corporate.jpg',    objectPosition: 'center bottom' },
-  { id: 'music',       label: 'Music',       cover: '/covers/music-videos.jpg', objectPosition: 'center'        },
-  { id: 'wedding',     label: 'Weddings',    cover: '/covers/wedding.jpg',      objectPosition: 'center'        },
-  { id: 'events',      label: 'Events',      cover: '/covers/events.jpg',       objectPosition: 'center'        },
-  { id: 'coming-soon', label: 'Coming Soon', cover: '/covers/coming-soon.jpg',  objectPosition: 'center'        },
+  { id: 'sports',      label: 'Desporto',      cover: '/covers/sports.jpg',       objectPosition: 'center'        },
+  { id: 'commercial',  label: 'Comercial',  cover: '/covers/corporate.jpg',    objectPosition: 'center bottom' },
+  { id: 'music',       label: 'Música',       cover: '/covers/music-videos.jpg', objectPosition: 'center'        },
+  { id: 'wedding',     label: 'Casamentos',    cover: '/covers/wedding.jpg',      objectPosition: 'center'        },
+  { id: 'events',      label: 'Eventos',      cover: '/covers/events.jpg',       objectPosition: 'center'        },
+  { id: 'coming-soon', label: 'Em Breve', cover: '/covers/coming-soon.jpg',  objectPosition: 'center'        },
 ]
 
 // ─── TIPOS ────────────────────────────────────────────────────────────────────
@@ -253,14 +253,14 @@ export const clients: Record<string, Client[]> = {
   'events': [
     {
       id: 'vagos-sensation-gourmet',
-      name: 'Vagos Sensation Gourmet — Praia da Vagueira',
+      name: 'Vagos Sensation Gourmet 26 — Praia da Vagueira',
       projects: [
         {
           id: 'vagos-main',
-          title: '2026',
-          description: 'Social content for Vagos Sensation Gourmet, the gourmet food festival at Praia da Vagueira. Vertical reels capturing the atmosphere, energy and flavours of the event.',
+          title: '',
+          description: 'Conteúdo para redes sociais do Vagos Sensation Gourmet, o festival gastronómico na Praia da Vagueira. Reels verticais que captam o ambiente, a energia e os sabores do evento.',
           videos: [
-            { id: 1, title: 'Vagos Sensation Gourmet', type: 'local', src: '/clients/vagos-sensation-gourmet/video1.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel1-thumb.jpg' },
+            { id: 1, title: '', type: 'local', src: '/clients/vagos-sensation-gourmet/video1.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel1-thumb.jpg' },
             { id: 2, title: 'Dia 1', type: 'local', src: '/clients/vagos-sensation-gourmet/video2.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel2-thumb.jpg' },
             { id: 3, title: 'Dia 2', type: 'local', src: '/clients/vagos-sensation-gourmet/video3.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel3-thumb.jpg' },
             { id: 4, title: 'Dia 3', type: 'local', src: '/clients/vagos-sensation-gourmet/video4.mp4', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel4-thumb.jpg' },
@@ -277,7 +277,7 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'festa-2026',
           title: '2026',
-          description: 'The 2026 edition of Festa da História de Bragança — three days capturing the medieval city come to life, from the official aftermovie to the historic fair.',
+          description: 'A edição de 2026 da Festa da História de Bragança — três dias a captar a cidade medieval a ganhar vida, do aftermovie oficial à feira histórica.',
           videos: [
             { id: 1, title: 'Dia 14 — Oficial',  type: 'local', src: '/clients/festa-da-historia/2026/dia14.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia14-thumb.jpg' },
             { id: 2, title: 'Dia 15',            type: 'local', src: '/clients/festa-da-historia/2026/dia15.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia15-thumb.jpg' },
@@ -288,21 +288,21 @@ export const clients: Record<string, Client[]> = {
         {
           id: 'festa-2025',
           title: '2025',
-          description: 'Coverage of the 2025 edition of Festa da História de Bragança.',
+          description: 'Cobertura da edição de 2025 da Festa da História de Bragança.',
           videos: [
-            { id: 1, title: 'Festa da História', type: 'gumlet', src: '69e79232ed3ab5a35435d318', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e79232ed3ab5a35435d318/thumbnail-1-0.png' },
-            { id: 2, title: 'Festa da História', type: 'gumlet', src: '69e79212aed638b82a99d299', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e79212aed638b82a99d299/thumbnail-1-0.png' },
-            { id: 3, title: 'Festa da História', type: 'gumlet', src: '69e792024fc3fe661c989f87', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792024fc3fe661c989f87/thumbnail-1-0.png' },
+            { id: 1, title: '', type: 'gumlet', src: '69e79232ed3ab5a35435d318', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e79232ed3ab5a35435d318/thumbnail-1-0.png' },
+            { id: 2, title: '', type: 'gumlet', src: '69e79212aed638b82a99d299', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e79212aed638b82a99d299/thumbnail-1-0.png' },
+            { id: 3, title: '', type: 'gumlet', src: '69e792024fc3fe661c989f87', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792024fc3fe661c989f87/thumbnail-1-0.png' },
           ],
         },
         {
           id: 'festa-2024',
           title: '2024',
-          description: 'Coverage of the 2024 edition of Festa da História de Bragança.',
+          description: 'Cobertura da edição de 2024 da Festa da História de Bragança.',
           videos: [
-            { id: 1, title: 'Festa da História', type: 'gumlet', src: '69e792484fc3fe661c98a819', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792484fc3fe661c98a819/thumbnail-1-0.png' },
-            { id: 2, title: 'Festa da História', type: 'gumlet', src: '69e7925d4fc3fe661c98ab2a', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e7925d4fc3fe661c98ab2a/thumbnail-1-0.png' },
-            { id: 3, title: 'Festa da História', type: 'gumlet', src: '69e792724fc3fe661c98adf4', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792724fc3fe661c98adf4/thumbnail-1-0.png' },
+            { id: 1, title: '', type: 'gumlet', src: '69e792484fc3fe661c98a819', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792484fc3fe661c98a819/thumbnail-1-0.png' },
+            { id: 2, title: '', type: 'gumlet', src: '69e7925d4fc3fe661c98ab2a', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e7925d4fc3fe661c98ab2a/thumbnail-1-0.png' },
+            { id: 3, title: '', type: 'gumlet', src: '69e792724fc3fe661c98adf4', portrait: false, thumb: 'https://video.gumlet.io/69e77de44fc3fe661c966462/69e792724fc3fe661c98adf4/thumbnail-1-0.png' },
           ],
           photos: [
             '/clients/festa-da-historia/DSC04714.jpg',
@@ -319,14 +319,14 @@ export const clients: Record<string, Client[]> = {
     },
     {
       id: 'cmi',
-      name: 'CMI — Congress Medicine Integrative',
+      name: 'ICIM — International Congress of Integrative Medicine',
       projects: [
         {
           id: 'cmi-main',
-          title: 'CMI',
-          description: 'The International Congress of Integrative Medicine (ICIM) is one of the leading events in the field of integrative health in Europe, held annually in Porto. It brings together specialists, healthcare professionals, and industry leaders to discuss new approaches that combine conventional medicine with complementary therapies, always grounded in scientific evidence.',
+          title: '',
+          description: 'O International Congress of Integrative Medicine (ICIM) é um dos principais eventos na área da saúde integrativa na Europa, realizado anualmente no Porto. Reúne especialistas, profissionais de saúde e líderes do setor para debater novas abordagens que combinam a medicina convencional com terapias complementares, sempre com base em evidência científica.',
           videos: [
-            { id: 1, title: 'CMI', type: 'gumlet', src: '69e78f9faed638b82a998a27', portrait: false, thumb: '/clients/cmi/capavideo.jpg' },
+            { id: 1, title: '', type: 'gumlet', src: '69e78f9faed638b82a998a27', portrait: false, thumb: '/clients/cmi/capavideo.jpg' },
           ],
           photos: [
             '/clients/cmi/DSC06324.jpg',
