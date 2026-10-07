@@ -280,8 +280,9 @@ export const clients: Record<string, Client[]> = {
           description: 'The 2026 edition of Festa da História de Bragança — three days capturing the medieval city come to life, from the official aftermovie to the historic fair.',
           videos: [
             { id: 1, title: 'Dia 14 — Oficial',  type: 'local', src: '/clients/festa-da-historia/2026/dia14.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia14-thumb.jpg' },
-            { id: 2, title: 'Dia 16',            type: 'local', src: '/clients/festa-da-historia/2026/dia16.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia16-thumb.jpg' },
-            { id: 3, title: 'Dia 17 — Feira',    type: 'local', src: '/clients/festa-da-historia/2026/dia17.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia17-thumb.jpg' },
+            { id: 2, title: 'Dia 15',            type: 'local', src: '/clients/festa-da-historia/2026/dia15.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia15-thumb.jpg' },
+            { id: 3, title: 'Dia 16',            type: 'local', src: '/clients/festa-da-historia/2026/dia16.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia16-thumb.jpg' },
+            { id: 4, title: 'Dia 17 — Feira',    type: 'local', src: '/clients/festa-da-historia/2026/dia17.mp4', portrait: false, thumb: '/clients/festa-da-historia/2026/dia17-thumb.jpg' },
           ],
         },
         {
