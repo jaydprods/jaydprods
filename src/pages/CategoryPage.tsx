@@ -543,6 +543,12 @@ export default function CategoryPage() {
   const cat = categories.find(c => c.id === category)
   const catClients = clients[category ?? ''] ?? []
 
+  // Redireciona slugs antigos para os novos temas (links/SEO não partem)
+  const legacy: Record<string, string> = { branding: 'commercial', corporate: 'commercial', 'music-videos': 'music' }
+  useEffect(() => {
+    if (category && legacy[category]) navigate('/work/' + legacy[category], { replace: true })
+  }, [category, navigate])
+
   if (!cat) return (
     <div style={{ background: '#000', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
       <p style={{ color: 'rgba(255,255,255,0.3)', fontFamily: "'Inter', sans-serif", letterSpacing: '0.2em' }}>Categoria não encontrada</p>

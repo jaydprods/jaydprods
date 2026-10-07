@@ -1,12 +1,11 @@
 // ─── CATEGORIAS ───────────────────────────────────────────────────────────────
 export const categories = [
-  { id: 'sports',       label: 'Sports',       cover: '/covers/sports.jpg',       objectPosition: 'center'        },
-  { id: 'branding',     label: 'Branding',     cover: '/covers/branding.jpg',     objectPosition: 'center'        },
-  { id: 'corporate',    label: 'Corporate',    cover: '/covers/corporate.jpg',    objectPosition: 'center bottom' },
-  { id: 'events',       label: 'Events',       cover: '/covers/events.jpg',       objectPosition: 'center'        },
-  { id: 'music-videos', label: 'Music Videos', cover: '/covers/music-videos.jpg', objectPosition: 'center'        },
-  { id: 'wedding',      label: 'Wedding',      cover: '/covers/wedding.jpg',      objectPosition: 'center'        },
-  { id: 'coming-soon',  label: 'Coming Soon',  cover: '/covers/coming-soon.jpg',  objectPosition: 'center'        },
+  { id: 'sports',      label: 'Sports',      cover: '/covers/sports.jpg',       objectPosition: 'center'        },
+  { id: 'commercial',  label: 'Commercial',  cover: '/covers/corporate.jpg',    objectPosition: 'center bottom' },
+  { id: 'music',       label: 'Music',       cover: '/covers/music-videos.jpg', objectPosition: 'center'        },
+  { id: 'wedding',     label: 'Weddings',    cover: '/covers/wedding.jpg',      objectPosition: 'center'        },
+  { id: 'events',      label: 'Events',      cover: '/covers/events.jpg',       objectPosition: 'center'        },
+  { id: 'coming-soon', label: 'Coming Soon', cover: '/covers/coming-soon.jpg',  objectPosition: 'center'        },
 ]
 
 // ─── TIPOS ────────────────────────────────────────────────────────────────────
@@ -167,7 +166,7 @@ export const clients: Record<string, Client[]> = {
       ],
     },
   ],
-  'branding': [
+  'commercial': [
     {
       id: 'umpercento',
       name: 'Umpercento — Clothing Brand',
@@ -194,8 +193,6 @@ export const clients: Record<string, Client[]> = {
         },
       ],
     },
-  ],
-  'corporate': [
     {
       id: 'acushla',
       name: 'Acushla — Natural Olive Oil',
@@ -343,7 +340,7 @@ export const clients: Record<string, Client[]> = {
       ],
     },
   ],
-  'music-videos': [
+  'music': [
     {
       id: 'sould-il',
       name: 'Sould Il',
