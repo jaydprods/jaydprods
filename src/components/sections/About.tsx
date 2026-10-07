@@ -62,8 +62,8 @@ export default function About({ introDone }: { introDone: boolean }) {
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white mb-6 leading-tight">
-            Cada frame<br />
-            <span className="text-zinc-500">conta uma história.</span>
+            Cada frame,<br />
+            <span className="text-zinc-500">uma história</span>
           </h2>
           <p className="text-zinc-400 leading-relaxed mb-4">
             A JAYD Productions é um estúdio de produção visual especializado em storytelling
