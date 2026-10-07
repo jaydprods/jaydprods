@@ -3,6 +3,7 @@ export const categories = [
   { id: 'sports',       label: 'Sports',       cover: '/covers/sports.jpg',       objectPosition: 'center'        },
   { id: 'branding',     label: 'Branding',     cover: '/covers/branding.jpg',     objectPosition: 'center'        },
   { id: 'corporate',    label: 'Corporate',    cover: '/covers/corporate.jpg',    objectPosition: 'center bottom' },
+  { id: 'events',       label: 'Events',       cover: '/covers/events.jpg',       objectPosition: 'center'        },
   { id: 'music-videos', label: 'Music Videos', cover: '/covers/music-videos.jpg', objectPosition: 'center'        },
   { id: 'wedding',      label: 'Wedding',      cover: '/covers/wedding.jpg',      objectPosition: 'center'        },
   { id: 'coming-soon',  label: 'Coming Soon',  cover: '/covers/coming-soon.jpg',  objectPosition: 'center'        },
@@ -12,7 +13,7 @@ export const categories = [
 export type Video = {
   id: number
   title: string
-  type: 'youtube' | 'vimeo' | 'gumlet' | 'local'
+  type: 'youtube' | 'vimeo' | 'gumlet' | 'local' | 'instagram'
   src: string
   portrait?: boolean  // true para vídeos 9:16 verticais
   thumb?: string      // capa personalizada (path em /public)
@@ -291,6 +292,27 @@ export const clients: Record<string, Client[]> = {
         },
       ],
     },
+  ],
+  'events': [
+    {
+      id: 'vagos-sensation-gourmet',
+      name: 'Vagos Sensation Gourmet — Praia da Vagueira',
+      projects: [
+        {
+          id: 'vagos-main',
+          title: 'Vagos Sensation Gourmet',
+          description: 'Social content for Vagos Sensation Gourmet, the gourmet food festival at Praia da Vagueira. Vertical reels capturing the atmosphere, energy and flavours of the event. Tap any reel to watch it on Instagram.',
+          videos: [
+            { id: 1, title: 'Vagos Sensation Gourmet', type: 'instagram', src: 'DbiQg51NUs6', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel1-thumb.jpg' },
+            { id: 2, title: 'Dia 1', type: 'instagram', src: 'DavdfbisQcq', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel2-thumb.jpg' },
+            { id: 3, title: 'Dia 2', type: 'instagram', src: 'DasiUMoMN4o', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel3-thumb.jpg' },
+            { id: 4, title: 'Dia 3', type: 'instagram', src: 'DapvhlWseae', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel4-thumb.jpg' },
+            { id: 5, title: 'Dia 4', type: 'instagram', src: 'Dac-14LsQ67', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel5-thumb.jpg' },
+            { id: 6, title: 'Dia 5', type: 'instagram', src: 'DaXj-bKMoZe', portrait: true, coverPortrait: true, thumb: '/clients/vagos-sensation-gourmet/reel6-thumb.jpg' },
+          ],
+        },
+      ],
+    },
     {
       id: 'festa-historia-braganca',
       name: 'Festa da História Bragança',
@@ -438,6 +460,20 @@ export const clients: Record<string, Client[]> = {
             '/clients/iara-joao/DSC05689.jpg',
             '/clients/iara-joao/DSC05719.jpg',
             '/clients/iara-joao/DSC06680.jpg',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'baptizado-alexandra',
+      name: 'Alexandra — Baptism & 25 Years',
+      projects: [
+        {
+          id: 'baptizado-main',
+          title: 'Baptism & 25 Years',
+          description: 'A family celebration film — the baptism and 25th anniversary of Alexandra, filmed with the same cinematic care as a wedding day.',
+          videos: [
+            { id: 1, title: 'Baptism & 25 Years', type: 'local', src: '/clients/baptizado-alexandra/video.mp4', portrait: false, thumb: '/clients/baptizado-alexandra/thumb.jpg' },
           ],
         },
       ],

@@ -295,7 +295,7 @@ function VideoEmbed({ title, type, src, portrait, thumb, coverPortrait }: Video)
       <>
         <div
           className="group"
-          onClick={() => setLightboxOpen(true)}
+          onClick={() => type === 'instagram' ? window.open(`https://www.instagram.com/reel/${src}/`, '_blank', 'noopener') : setLightboxOpen(true)}
           style={coverPortrait
             ? { position: 'relative', width: '100%', maxWidth: '380px', margin: '0 auto', aspectRatio: '9/16', overflow: 'hidden', background: '#000', cursor: 'pointer' }
             : { position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', background: '#000', cursor: 'pointer' }
@@ -317,6 +317,15 @@ function VideoEmbed({ title, type, src, portrait, thumb, coverPortrait }: Video)
               <div style={{ width: 0, height: 0, borderTop: '7px solid transparent', borderBottom: '7px solid transparent', borderLeft: '13px solid rgba(255,255,255,0.85)', marginLeft: '3px' }} />
             </div>
           </div>
+          {type === 'instagram' && (
+            <div style={{ position: 'absolute', top: '10px', right: '10px', width: '26px', height: '26px', borderRadius: '7px', background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </div>
+          )}
         </div>
 
         <AnimatePresence>
