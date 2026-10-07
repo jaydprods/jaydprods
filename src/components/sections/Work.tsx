@@ -177,9 +177,6 @@ export default function Work() {
             }}>
               Serviços
             </h2>
-            <p style={{ maxWidth: '560px', marginTop: '20px', fontFamily: "'Inter', sans-serif", fontWeight: 300, fontSize: '14px', lineHeight: 1.75, color: 'rgba(255,255,255,0.45)' }}>
-              Produção completa, do primeiro conceito à emissão final — vídeo, fotografia e live, tudo num só sítio.
-            </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-5">
